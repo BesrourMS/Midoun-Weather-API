@@ -27,38 +27,38 @@ $.getJSON('http://cors.io/?u=https://spreadsheets.google.com/feeds/list/1GgKnLq_
     var content = '';
 
 	var entry = data.feed.entry;
-
+	entry = entry.replace("\"$t\":", "\"valeur\":");
     $(entry).each(function(){
 
-		content +='<li><span> Check Time : '+ this.gsx$_cn6ca.$t +' </span><br />';
+		content +='<li><span> Check Time : '+ this.gsx$_cn6ca.valeur +' </span><br />';
 
-		content +='<span> Current Temp Fahrenheit : '+ this.gsx$_cokwr.$t +' </span><br />';
+		content +='<span> Current Temp Fahrenheit : '+ this.gsx$_cokwr.valeur +' </span><br />';
 
-		content +='<span> Current Temp Celsius : '+ this.gsx$_cpzh4.$t +' </span><br />';
+		content +='<span> Current Temp Celsius : '+ this.gsx$_cpzh4.valeur +' </span><br />';
 
-		content +='<span> Current Current Condition : '+ this.gsx$_cre1l.$t +' </span><br />';
+		content +='<span> Current Current Condition : '+ this.gsx$_cre1l.valeur +' </span><br />';
 
-		content +='<span> High Temp Fahrenheit : '+ this.gsx$_ciyn3.$t +' </span><br />';
+		content +='<span> High Temp Fahrenheit : '+ this.gsx$_ciyn3.valeur +' </span><br />';
 
-		content +='<span> High Temp Celsius : '+ this.gsx$_ckd7g.$t +' </span><br />';
+		content +='<span> High Temp Celsius : '+ this.gsx$_ckd7g.valeur +' </span><br />';
 
-		content +='<span> Low Temp Fahrenheit : '+ this.gsx$_clrrx.$t +' </span><br />';
+		content +='<span> Low Temp Fahrenheit : '+ this.gsx$_clrrx.valeur +' </span><br />';
 
-		content +='<span> Low Temp Celsius : '+ this.gsx$_cyevm.$t +' </span><br />';
+		content +='<span> Low Temp Celsius : '+ this.gsx$_cyevm.valeur +' </span><br />';
 
-		content +='<span> Todays Condition : '+ this.gsx$_cztg3.$t +' </span><br />';
+		content +='<span> Todays Condition : '+ this.gsx$_cztg3.valeur +' </span><br />';
 
-		content +='<span> Humidity : '+ this.gsx$_cssly.$t +' </span><br />';
+		content +='<span> Humidity : '+ this.gsx$_cssly.valeur +' </span><br />';
 
-		content +='<span> Wind Speed Mph : '+ this.gsx$_cu76f.$t +' </span><br />';
+		content +='<span> Wind Speed Mph : '+ this.gsx$_cu76f.valeur +' </span><br />';
 
-		content +='<span> Wind Speed Kph : '+ this.gsx$_cvlqs.$t +' </span><br />';
+		content +='<span> Wind Speed Kph : '+ this.gsx$_cvlqs.valeur +' </span><br />';
 
-		content +='<span> Wind Direction : '+ this.gsx$_cx0b9.$t +' </span><br />';
+		content +='<span> Wind Direction : '+ this.gsx$_cx0b9.valeur +' </span><br />';
 
-		content +='<span> Sunrise At : '+ this.gsx$_db1zf.$t +' </span><br />';
+		content +='<span> Sunrise At : '+ this.gsx$_db1zf.valeur +' </span><br />';
 
-		content +='<span> SunsetAt : '+ this.gsx$_dcgjs.$t +' </span></li><hr>';
+		content +='<span> SunsetAt : '+ this.gsx$_dcgjs.valeur +' </span></li><hr>';
 
     });
 
