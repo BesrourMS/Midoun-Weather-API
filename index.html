@@ -27,6 +27,7 @@ $.getJSON('http://cors.io/?u=https://spreadsheets.google.com/feeds/list/1GgKnLq_
     var content = '';
 
 	var entry = data.feed.entry;
+	entry = entry.stringify;
 	entry = entry.replace("\"$t\":", "\"valeur\":");
     $(entry).each(function(){
 
